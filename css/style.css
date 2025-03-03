@@ -1,0 +1,132 @@
+@font-face {
+    font-family: "Figtree";
+    src: url('../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    --second_font:hsla(252, 6%, 83%, 0.849);
+    --input_bg:hsla(245, 19%, 35%, 0.397);
+    --input_border_color:hsla(252, 6%, 83%, 0.466);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-family: "Figtree", serif;
+}
+
+body{
+    background:
+    url('../assets/images/pattern-squiggly-line-top.svg') right 80px / auto no-repeat,
+    url('../assets/images/pattern-squiggly-line-bottom-desktop.svg') left bottom / auto no-repeat,
+    url('../assets/images/pattern-circle.svg') 85px -15% / 220px no-repeat,
+    url('../assets/images/pattern-circle.svg') 80% 60% / 220px no-repeat,
+    url('../assets/images/pattern-lines.svg') center / auto no-repeat,
+    url('../assets/images/background-desktop.png') center / cover no-repeat;
+    height: 100vh;
+}
+
+label{
+    margin-top: 20px;
+    display: block;
+}
+
+input{
+    margin-top: 10px;
+    padding: 15px 10px;
+    width: 100%;
+    background-color: var(--input_bg);
+    border: 1px solid var(--input_border_color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+input:hover{
+    background-color: hsla(245, 19%, 35%, 0.753);
+}
+
+input::placeholder{
+    color: var(--second_font);
+}
+
+input[type="file"]{
+    display: none;
+}
+.container{
+    display: flex;
+    margin: auto;
+    max-width: 760px;
+    flex-direction: column;
+    align-items: center;
+}
+.header{
+    text-align: center;
+}
+.conf_logo{
+    margin-top: 40px;
+}
+.conf_title{
+    margin-top: 50px;
+    font-size: 50px;
+}
+.conf_descr{
+    margin-top: 25px;
+    font-size: 20px;
+    color: var(--second_font);
+}
+.form{
+    margin-top: 20px;
+    max-width: 375px;
+}
+.upload-input{
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 60px;
+    text-align: center;
+    border: 0.5px dashed var(--input_border_color);
+    background-color: var(--input_bg);
+    border-radius: 10px;
+    cursor: pointer;
+}
+.upload_icon{
+    padding: 5px;
+    background-color: var(--input_bg);
+    border: 0.5px  solid hsla(246, 15%, 58%, 0.185);
+    border-radius: 7px;
+}
+.upload_promt{
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight:500;
+    color: var(--second_font);
+}
+.image_promt{
+    margin-top: 10px;
+    padding-left: 20px;
+    background: url('../assets/images/icon-info.svg') left / 13px no-repeat;
+    font-size: 10px;
+    color: hsl(245, 15%, 58%);
+}
+.info_icon{
+    
+    width: 15px;
+}
+
+.submit-btn{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 900;
+    color: hsl(248, 70%, 10%);
+    background-color: hsl(7, 88%, 67%);
+    cursor: pointer;
+    border: none;
+}
+.submit-btn:hover{
+    background-color: hsl(7, 71%, 60%);
+    box-shadow: 0 3px 0 0 hsl(7, 88%, 67%);
+}
