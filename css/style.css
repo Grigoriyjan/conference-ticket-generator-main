@@ -57,6 +57,14 @@ input::placeholder{
 input[type="file"]{
     display: none;
 }
+
+.hidden{
+    display: none;
+}
+.event_none{
+    pointer-events: none;
+}
+
 .container{
     display: flex;
     margin: auto;
@@ -84,7 +92,7 @@ input[type="file"]{
     max-width: 375px;
 }
 .upload-input{
-    width: 100%;
+    width: 362px;
     margin-top: 10px;
     padding: 15px 60px;
     text-align: center;
@@ -102,22 +110,59 @@ input[type="file"]{
     border: 0.5px  solid hsla(246, 15%, 58%, 0.185);
     border-radius: 7px;
 }
+.avatar-img{
+    padding: 0;
+    width: 40px;
+    height: 40px;
+}
+.interact-btns{
+    margin-top: 10px;
+}
+.interact-button{
+    pointer-events: all;
+    display: inline;
+    cursor: pointer;
+    padding: 3px 9px;
+    font-size: 11px;
+    color: var(--second_font);
+    background-color: var(--input_bg);
+    border-radius: 4px;
+    border: none;
+}
+.interact-button:hover{
+    text-decoration: underline;
+}
 .upload_promt{
     margin-top: 10px;
     font-size: 15px;
     font-weight:500;
     color: var(--second_font);
 }
-.image_promt{
+.promt{
     margin-top: 10px;
     padding-left: 20px;
     background: url('../assets/images/icon-info.svg') left / 13px no-repeat;
-    font-size: 10px;
     color: hsl(245, 15%, 58%);
+    font-size: 10px;
 }
-.info_icon{
-    
-    width: 15px;
+.promt_error{
+    margin-top: 10px;
+    font-size: 10px;
+    padding-left: 20px;
+    color: hsl(7, 88%, 67%);
+    position: relative;
+}
+.promt_error::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13px;
+    height: 13px;
+    background-color: hsl(7, 88%, 67%);
+    mask: url('../assets/images/icon-info.svg') no-repeat center / contain;
+    -webkit-mask: url('../assets/images/icon-info.svg') no-repeat center / contain;
 }
 
 .submit-btn{

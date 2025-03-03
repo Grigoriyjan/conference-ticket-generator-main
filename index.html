@@ -16,15 +16,19 @@
       <p class="conf_descr">Secure your spot at next year's biggest coding conference.</p>
     </header>
     <form action="" class="form">
-      <label for="upload_avatar">
+      <label class="upload_field" for="upload_avatar">
         <span>Upload Avatar</span>
         <div class="upload-input">
           <img src="./assets/images/icon-upload.svg" alt="" class="upload_icon">
+          <div class="interact-btns hidden">
+            <button class="interact-button" id="remove_img" type="button">Remove image</button>
+            <label class="interact-button" for="upload_avatar">Change image</label>
+          </div>
           <p class="upload_promt">Drag and drop or click to upload</p>
         </div>
-      <p class="image_promt">Upload your photo (JPG or PNG, max size: 500KB).</p>
+      <p class="promt"> Upload your photo (JPG or PNG, max size: 500KB).</p>
       </label>
-      <input type="file" id="upload_avatar">
+      <input type="file" id="upload_avatar" accept="image/*">
       <label for="name">Full Name</label>
       <input type="text" id="name">
       <label for="name">Email Address</label>
@@ -33,6 +37,7 @@
       <input type="text" id="github" placeholder="@yourusername">
       <input type="submit" class="submit-btn" value="Generate My Ticket">
     </form>
+    <script src="./main.js"></script>
   </div>
 
 
