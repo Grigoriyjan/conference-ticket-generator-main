@@ -47,6 +47,7 @@ input{
 
 input:hover{
     background-color: hsla(245, 19%, 35%, 0.753);
+    border: 1px solid var(--input_border_color);
 }
 
 input::placeholder{
@@ -71,7 +72,7 @@ input[type="file"]{
 }
 .conf_title{
     margin-top: 50px;
-    font-size: 50px;
+    font-size: clamp(30px,5vw ,50px);
 }
 .conf_descr{
     margin-top: 25px;
@@ -91,6 +92,9 @@ input[type="file"]{
     background-color: var(--input_bg);
     border-radius: 10px;
     cursor: pointer;
+}
+.upload-input:hover{
+    background-color: hsla(245, 19%, 35%, 0.753);
 }
 .upload_icon{
     padding: 5px;
@@ -127,6 +131,7 @@ input[type="file"]{
     border: none;
 }
 .submit-btn:hover{
+    border: none;
     background-color: hsl(7, 71%, 60%);
     box-shadow: 0 3px 0 0 hsl(7, 88%, 67%);
 }
