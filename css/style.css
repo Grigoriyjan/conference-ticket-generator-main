@@ -6,6 +6,8 @@
 }
 
 :root{
+    --error_color:hsl(7, 88%, 67%);
+    --on_hover:hsla(245, 19%, 35%, 0.753);
     --second_font:hsla(252, 6%, 83%, 0.849);
     --input_bg:hsla(245, 19%, 35%, 0.397);
     --input_border_color:hsla(252, 6%, 83%, 0.466);
@@ -44,9 +46,12 @@ input{
     border-radius: 10px;
     cursor: pointer;
 }
+.input_error{
+    border-color: var(--error_color);
+}
 
 input:hover{
-    background-color: hsla(245, 19%, 35%, 0.753);
+    background-color: var(--on_hover);
     border: 1px solid var(--input_border_color);
 }
 
@@ -83,6 +88,8 @@ input[type="file"]{
     font-size: clamp(30px,5vw ,50px);
 }
 .conf_descr{
+    max-width: 580px;
+    margin: auto;
     margin-top: 25px;
     font-size: 20px;
     color: var(--second_font);
@@ -102,7 +109,10 @@ input[type="file"]{
     cursor: pointer;
 }
 .upload-input:hover{
-    background-color: hsla(245, 19%, 35%, 0.753);
+    background-color: var(--on_hover);
+}
+.dragover{
+    background-color: var(--on_hover);
 }
 .upload_icon{
     padding: 5px;
@@ -149,7 +159,7 @@ input[type="file"]{
     margin-top: 10px;
     font-size: 10px;
     padding-left: 20px;
-    color: hsl(7, 88%, 67%);
+    color: var(--error_color);
     position: relative;
 }
 .promt_error::before {
@@ -160,7 +170,7 @@ input[type="file"]{
     transform: translateY(-50%);
     width: 13px;
     height: 13px;
-    background-color: hsl(7, 88%, 67%);
+    background-color: var(--error_color);
     mask: url('../assets/images/icon-info.svg') no-repeat center / contain;
     -webkit-mask: url('../assets/images/icon-info.svg') no-repeat center / contain;
 }
@@ -179,4 +189,80 @@ input[type="file"]{
     border: none;
     background-color: hsl(7, 71%, 60%);
     box-shadow: 0 3px 0 0 hsl(7, 88%, 67%);
+}
+
+.ticket{
+    width: clamp(355px ,50vw, 525px);
+    height: 250px;
+    margin-top: 160px;
+    background: url(../assets/images/pattern-ticket.svg) center / contain no-repeat;
+    position: relative;
+    display: grid;
+    grid-template: clamp(90px,10vw,100px) clamp(50px,20vw,120px) / 3fr 1fr;
+    padding: 10px 0 0px 1vw;
+}
+.ticket_icon{
+    width: clamp(150px ,50vw, 230px);
+}
+.ticket_info{
+    align-self: center;
+}
+.info{
+    margin-top: 5px;
+    margin-left: 50px;
+    font-size: 15px;
+    color: var(--second_font);
+}
+.ticket_holder{
+    align-self: flex-end;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    grid-area: 2/1;
+}
+.holder_avatar{
+    width: clamp(50px ,10vw, 65px);
+    border-radius: 10px;
+}
+.holder_name{
+    font-size: clamp(20px,5vw,23px);
+    font-weight: 500;
+}
+.holder_github{
+    background: url('../assets/images/icon-github.svg') left / 20px no-repeat;
+    font-size: 1rem;
+    color: var(--second_font);
+    padding-left: 25px;
+    margin-top: 10px;
+}
+.ticket_num{
+    position: absolute;
+    right: 0;
+    bottom: 45%;
+    transform:rotate(90deg);
+    font-size: 28px;
+    font-weight: 500;
+    color: #887DA5;
+}
+
+.user-name{
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width:400px) {
+    body{
+        background:
+        url('../assets/images/pattern-squiggly-line-top.svg') right 80px / auto no-repeat,
+        url('../assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg') left bottom / 300px no-repeat,
+        url('../assets/images/pattern-circle.svg') 85px -15% / 220px no-repeat,
+        url('../assets/images/pattern-circle.svg') 80% 60% / 220px no-repeat,
+        url('../assets/images/pattern-lines.svg') center / auto no-repeat,
+        url('../assets/images/background-desktop.png') center / cover no-repeat;
+    }
+
+    .ticket{
+        padding: 33px 0 0px 2vw;
+    }
 }
